@@ -1,0 +1,418 @@
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 34px;
+    color: #777777;
+    background: url("../images/halftone-yellow.png");
+}
+ * {
+     box-sizing: border-box;
+ }
+
+ /* general */
+ .container {
+     width: 100%;
+     max-width: 960px; 
+     margin: 0 auto;
+     clear: both;
+ }
+
+ h1,
+ h2,
+ h3, 
+ p {
+     margin-bottom: 20px;
+ }
+
+ p:last-child {
+     margin-bottom: 0;
+ }
+
+ h1,
+ h2,
+ h3 {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-weight: 700;
+     color: #4aaaa5;
+ }
+
+ h1 {
+     padding-bottom: 20px;
+     font-size: 30px;
+     line-height: 49px;
+     border-bottom: 3px solid #dddddd;
+ }
+
+ h2,
+ h3 {
+     font-size: 22px;
+ } 
+
+ /* header */
+
+ #masthead {
+     position: fixed;
+     z-index: 99;
+     width: 100%;
+     margin: 0 0 30px;
+     overflow: auto;
+     color: #ffffff;
+     border-bottom: 2px solid #cccccc;
+ }
+
+ #logo {
+     float: left;
+     width: 300px;
+     height: 90px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size:25px;
+     font-weight: 700;
+     line-height: 90px;
+     color: #ffffff;
+     text-align: center;
+     text-decoration: none;
+     background: #4aaaa5;
+ }
+
+ nav {
+     float: right;
+     margin-top: 25px;
+ }
+
+ nav a {
+     display: inline-block;
+     padding-left: 15px;
+     margin-left: 15px;
+     line-height: 18px;
+     color: #999;
+     text-decoration: none;
+     border-left: 1px solid #efefef;
+ }
+
+ nav a:first-child {
+     border-left: 0 none; 
+ }
+
+ /* footer */
+
+ footer {
+     padding: 30px 0;
+     clear: both;
+     font-size: 12px;
+     color: #ffffff;
+     color: #cccccc;
+     text-align: center;
+     background: #666666;
+     border-top: 8px solid #4aaaa5;
+     height: 50px;
+ }
+
+ h3, h2 {
+     padding-bottom: 20px;
+     margin-bottom: 15px;
+     line-height: 22px;
+     border-bottom: 2px solid #eeeeee;
+ }
+
+ /* main */
+
+
+ #main-container {
+     padding-top: 130px;
+     min-height: calc(100vh - 70px);
+ }
+
+ .main-section {
+     float: left;
+     width: 100%;
+     max-width: 960px;
+     padding: 30px;
+     margin: 0 0 40px;
+     background: #ffffff;
+     border: 1px solid #dddddd;
+ }
+
+ /* portfolio page */
+
+ .work {
+     position: relative;
+     float: left;
+     width: 274px;
+     margin: 20px 0 250px;
+     overflow: auto;
+ }
+
+
+ .work:nth-child(even) {
+     margin-right: 40px; 
+ }
+
+ .work img {
+     width: 100%;
+     border: 0 none;
+     opacity: 0.8;
+ }
+
+ .work h3 {
+     position: absolute;
+     bottom: 20px;
+     width: 100%;
+     padding: 15px;
+     margin-bottom: 0;
+     font-weight: 300;
+     line-height: 30px;
+     color: #ffffff;
+     text-align: center;
+     background: #4aaaa5;
+     border-bottom: 0;
+ }
+
+ .auth-image {
+     float: left;
+     width: 200px;
+     height: auto;
+     margin-top: 10px;
+     margin-right: 25px;
+ }
+
+ /* contact page */
+
+ #contact-form ul {
+     margin-bottom: 20px;
+     list-style: none;
+ }
+
+ #contact-form li {
+     margin-bottom: 10px;
+ }
+
+ label,
+ input[type=text],
+ input[type=email],
+ textarea {
+     display: block;
+     width: 100%;
+ }
+
+ input[type=text],
+ input[type=email],
+ textarea {
+     height: 35px;
+     padding: 0 10px;
+     font-size: 14px;
+     border: 1px solid #dddddd;
+ }
+
+ textarea {
+     height: 200px;
+ }
+
+input[type=submit] {
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    background: #4aaaa5;
+    border: 0 none;
+}
+
+
+/* The margins around my main content could be fixed further.
+The margins b/t my portfolio content need to be adjusted. */
+@media only screen and (min-width: 980px) {
+    #masthead {
+        width: 100%;
+        position: absolute;
+        background: #ffffff;
+        padding-right: 50px;
+    }
+    
+    .main-section {
+        width: 100%;
+        max-height: 90;
+        /* float: none; */
+        margin: 40px;
+        position: relative;
+        left: -40px;
+        overflow: auto;
+    }
+
+    .container {
+        width: 70%;
+    }
+}
+
+/* There's a break in the responsiveness. 
+    I would need to add another media query, or find other solution so that b/t 641-768 px screens, the nav retained a white background.
+    Also, the form content overflows the main content at a point.  
+My bottom margins could be greater it seems between the end of the main content and the footer. */
+
+@media only screen and (max-width: 768px) {
+
+    /* header */
+    #masthead {
+        width: 100%;
+        position: absolute;
+        padding-right: 50px;
+    }
+
+    /* contact page */
+    #contact-form ul {
+        position: relative;
+        left: -40px;
+    }
+
+    #contact-form {
+        width: 105%;
+    }
+
+    label,
+    input[type=text],
+    input[type=email],
+    textarea {
+        display: block;
+        width: 700px;
+    }
+
+    /* portfolio */
+
+    .work { 
+        width: 45%;
+        margin: 10px auto;
+        position: relative;
+        right: -15px;
+    }
+
+
+}
+
+
+
+ 
+
+/* I would need to align header with rest of content. 
+I need to fix the margins on the main content section and spacing of inputs/textarea on my form.
+The portfolio pictures overflow the rest the main section when the screen is minimized all the way.
+The contact form is also too wide - my width needs to be fixed in this section. */
+@media only screen and (max-width: 640px) {
+   
+    /* general */
+     body {
+        line-height: 30px;
+    }
+ 
+     h1, h2 {
+         margin-bottom: 0 auto;
+     }
+ 
+     /* header */
+     #logo {
+         padding: 10px 20px;
+         width: 100%;
+     }
+ 
+     #masthead {
+         position: static;
+         margin: none;
+         text-align: center;
+         border: none;
+     }
+ 
+     /* margin between this and top is too big. when i narrow, it seems to make nav bar unclickable */
+     /* I would need to fix the margins in the main-section b/t my pictures.
+     Also, the pictures overflow the main section when the screen is minimized fully - I'd want to address this overflow.  */
+     nav {
+         /* float: left; */
+         display: block;
+         background: #ffffff;
+         margin: 0 auto;
+         width: 100%;
+         margin-bottom: 10px;
+         padding: 20px 20px;
+     }
+ 
+     nav a {
+         z-index: 99;
+     }
+     
+ 
+     /* main */
+     #main-container {
+         width: 95%;
+         margin: 5px;
+         margin-left: auto;
+         margin-left: auto;
+         margin-top: 5px;
+         position: relative;
+         bottom: 75px;
+     }
+ 
+     /* about page */
+     p:last-child {
+         margin-bottom: 20;
+     }
+ 
+     .main-container {
+         float: none;
+     }
+     
+     .auth-image {
+         margin: auto;
+         float: none;
+         clear: both;
+         width: 100%;
+         height: 25%;
+     }
+ 
+     p {
+         clear: both;
+         width: 100%;
+         padding: 20px;
+     }
+ 
+     /* contact page */
+ 
+     #contact-form ul {
+         position: relative;
+         left: -40px;
+     }
+ 
+     #contact-form {
+         width: 100%;
+     }
+
+     label,
+    input[type=text],
+    input[type=email],
+    textarea {
+    display: block;
+    width: 95%;
+    }
+ 
+     /* portfolio */
+ 
+     .work img {
+         width: 350px;
+         border: 0 none;
+         opacity: 0.8;
+         margin-bottom: 0;
+         overflow: auto;
+     }
+ 
+     .work {
+         position: relative;
+         left: 75px;
+         padding: 5px;
+         width: 100%;
+         overflow: auto;
+         margin-left: auto;
+         margin-right: auto;
+     }
+ 
+     .work h3 {
+         width: 350px;
+         padding: 20px;
+     }
+ 
+ 
+ }

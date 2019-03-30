@@ -4,6 +4,7 @@ body {
     line-height: 34px;
     color: #777777;
     background: url("../images/halftone-yellow.png");
+    margin: 0;
 }
  * {
      box-sizing: border-box;
@@ -120,6 +121,7 @@ body {
  #main-container {
      padding-top: 130px;
      min-height: calc(100vh - 70px);
+     /*margin: 0;*/
  }
 
  .main-section {

@@ -140,6 +140,7 @@ body {
      position: relative;
      float: left;
      width: 274px;
+     min-height: 274px;
      margin: 20px 0 250px;
      overflow: auto;
  }
